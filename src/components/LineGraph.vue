@@ -23,8 +23,6 @@ function generateGraphLabels(hoursBack = 48) {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 
-    const dayDiff = (labelDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
-
     let label = ''
 
     if (isMidnight) {
@@ -114,6 +112,8 @@ const setChartOptions = () => {
                 type: 'linear',
                 display: true,
                 position: 'right',
+                min: 0,
+                max: 40,
                 ticks: {
                     color: textColorSecondary
                 },
