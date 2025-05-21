@@ -88,6 +88,13 @@ const setChartOptions = () => {
                 labels: {
                     color: textColor
                 }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context: any) {
+                        return `${context.dataset.label}: ${context.parsed.y}kg`;
+                    }
+                }
             }
         },
         scales: {
