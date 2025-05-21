@@ -19,6 +19,17 @@ const getLast7DaysLabels = () => {
     return labels
 }
 
+const chartlabels = getLast7DaysLabels();
+
+function ariaLabelsBarGraph(timeLabels: string[], dataA: number[], dataB: number[], dataC: number[], dataD: number[], dataE: number[])
+{
+    let text = ""
+    for (let i = 0; i < timeLabels.length; i++){
+        text += timeLabels[i] + ": Feed A: " + dataA[i] + " kg, Feed B: " + dataB[i] + " kg, Feed C: " + dataC[i] + " kg, Feed D: " + dataD[i] + " kg, Feed E: " + dataE[i] + "kg, "
+    }
+    return text;
+}
+
 
 const chartData = ref();
 const chartOptions = ref();
@@ -27,7 +38,7 @@ const setChartData = () => {
     const documentStyle = getComputedStyle(document.documentElement);
 
     return {
-        labels: getLast7DaysLabels(),
+        labels: chartlabels,
         datasets: [
             {
                 label: 'Feed A',
@@ -113,6 +124,7 @@ onMounted(() => {
 
 <template>
   <div class="card">
-      <Chart type="bar" :data="chartData" :options="chartOptions" class="h-[30rem]"  />
+      <Chart type="bar" :data="chartData" :options="chartOptions" class="h-[30rem]" :aria-label="`Bar chart that shows feed usage for the last 7 days with kg feed as Y-axis values and 1 day intervals as X-values. Data is:
+    ${ ariaLabelsBarGraph(chartlabels, [53, 41, 65, 32, 60, 29, 56], [28, 56, 13, 48, 35, 19, 67], [44, 39, 31, 51, 60, 63, 28], [19, 47, 33, 55, 49, 41, 60], [28, 29, 60, 41, 52, 63, 33]) }`" />
   </div>
 </template>
