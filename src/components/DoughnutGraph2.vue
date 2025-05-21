@@ -11,7 +11,7 @@ const setChartData = () => {
     return {
         datasets: [
             {
-                data: [222.5, maxFeedKg - 222.5],
+                data: [222.5, Number((maxFeedKg - 222.5).toFixed(1))],
                 backgroundColor: [documentStyle.getPropertyValue('--p-cyan-500'), documentStyle.getPropertyValue('--p-gray-500'), documentStyle.getPropertyValue('--p-gray-500')],
                 hoverBackgroundColor: [documentStyle.getPropertyValue('--p-cyan-400'), documentStyle.getPropertyValue('--p-gray-400'), documentStyle.getPropertyValue('--p-gray-400')]
             }
@@ -32,13 +32,22 @@ const setChartOptions = () => {
               color: textColor,
               cutout: '60%',
           },
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.parsed || 0;
+              return label ? `${label}: ${value} kg` : `${value} kg`;
+            }
+          }
         }
       },
     };
 };
 
 const getChartData = () => {
-  return chartData.value?.datasets[0]?.data[0] ? `${chartData.value.datasets[0].data[0]} <br/>/ ${maxFeedKg}` : '';
+  return chartData.value?.datasets[0]?.data[0] ? `${chartData.value.datasets[0].data[0]} kg <br/>/ ${maxFeedKg} kg` : '';
 };
 
 onMounted(() => {
