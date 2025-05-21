@@ -46,7 +46,7 @@ function generateGraphLabels(hoursBack = 48) {
   return labels
 }
 
-function ariaLabelsLineGraph(timeLabels, data)
+function ariaLabelsLineGraph(timeLabels: string[], data: number[])
 {
     let text = ""
     for (let i = 0; i < timeLabels.length; i++){
@@ -128,7 +128,7 @@ const setChartOptions = () => {
                     color: textColorSecondary
                 },
                 grid: {
-                    drawOnChartArea: false,
+                    drawOnChartArea: false, 
                     color: surfaceBorder
                 }
             }
