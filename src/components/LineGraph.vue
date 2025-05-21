@@ -128,7 +128,7 @@ const setChartOptions = () => {
                     color: textColorSecondary
                 },
                 grid: {
-                    drawOnChartArea: false,
+                    drawOnChartArea: false, 
                     color: surfaceBorder
                 }
             }
