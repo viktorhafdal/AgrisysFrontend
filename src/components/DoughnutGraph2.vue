@@ -65,8 +65,8 @@ onMounted(() => {
     <LegendTag label="Feed consumed" color="var(--p-gray-500)"/>
   </div>
   <div class="relative">
-    <div class="card flex justify-center">
-      <Chart type="doughnut" :data="chartData" :options="chartOptions" class="w-full h-[300px]" :aria-label="` Doughnut Graph showing remaining feed yesterday, where there has been used 222.5kg out of the maximum of ${maxFeedKg}`" />
+    <div class="card flex justify-center" role="Widget" :aria-label="` Doughnut Graph showing remaining feed yesterday, where there has been used 222.5kg out of the maximum of ${maxFeedKg}`">
+      <Chart type="doughnut" :data="chartData" :options="chartOptions" class="w-full h-[300px]" />
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <span class="text-2xl font-bold text-white" v-html="getChartData()"></span>
       </div>

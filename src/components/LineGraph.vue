@@ -143,8 +143,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="card">
-    <Chart type="line" :data="chartData" :options="chartOptions" class="h-[30rem]" :aria-label="`Line Chart that shows water usage for the last 48 hours with litres as Y-axis values and 2 hour intervals as X-values. Data is:
-    ${ ariaLabelsLineGraph(chartLabels, [25, 24, 26, 27, 8, 26, 28, 30, 29, 31, 37, 32, 28, 26, 27, 9, 25, 24, 26, 30, 28, 36, 29, 27, 25, 17]) }`" />
+  <div class="card" role="Widget" :aria-label="`Line Chart that shows water usage for the last 48 hours with litres as Y-axis values and 2 hour intervals as X-values. Data is:
+    ${ ariaLabelsLineGraph(chartLabels, [25, 24, 26, 27, 8, 26, 28, 30, 29, 31, 37, 32, 28, 26, 27, 9, 25, 24, 26, 30, 28, 36, 29, 27, 25, 17]) }`">
+    <Chart type="line" :data="chartData" :options="chartOptions" class="h-[30rem]" />
   </div>
 </template>
