@@ -49,7 +49,7 @@ onMounted(() => {
 <template>
   <div class="relative">
     <div class="card flex justify-center">
-      <Chart type="doughnut" :data="chartData" :options="chartOptions" class="w-full md:w-[30rem]" />
+      <Chart type="doughnut" :data="chartData" :options="chartOptions" class="w-full md:w-[30rem]" :aria-label="` Doughnut Graph showing remaining feed yesterday, where there has been used 222.5kg out of the maximum of ${maxFeedKg}`" />
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <span class="text-2xl font-bold text-white" v-html="getChartData()"></span>
       </div>
