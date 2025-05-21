@@ -59,10 +59,10 @@ onMounted(() => {
 
 <template>
   <div class="pt-2">
-    <LegendTag label="Feed remaining" color="var(--p-cyan-500)"/>
+    <LegendTag label="Feed remaining" bgColor="var(--p-cyan-500)" textColor="#0A0A0A"/>
   </div>
   <div class="pt-2">
-    <LegendTag label="Feed consumed" color="var(--p-gray-500)"/>
+    <LegendTag label="Feed consumed" bgColor="var(--p-gray-500)" textColor="#FFF"/>
   </div>
   <div class="relative">
     <div class="card flex justify-center" role="Widget" :aria-label="`Doughnut Graph showing remaining feed today, where there has been used 156.2kg out of the maximum of ${maxFeedKg}`">

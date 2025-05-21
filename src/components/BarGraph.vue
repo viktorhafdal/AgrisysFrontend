@@ -130,10 +130,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="card">
-        <div role="Widget" :aria-label="`Bar chart that shows feed usage for the last 7 days with kg feed as Y-axis values and 1 day intervals as X-values. Data is:
-        ${ ariaLabelsBarGraph(chartlabels, [53, 41, 65, 32, 60, 29, 56], [28, 56, 13, 48, 35, 19, 67], [44, 39, 31, 51, 60, 63, 28], [19, 47, 33, 55, 49, 41, 60], [28, 29, 60, 41, 52, 63, 33]) }`">
-                <Chart type="bar" :data="chartData" :options="chartOptions" class="h-[30rem]"/>
-        </div>
+  <div class="card">
+    <div role="img" :aria-label="`Bar chart that shows feed usage for the last 7 days with kg feed as Y-axis values and 1 day intervals as X-values. Data is:
+      ${ ariaLabelsBarGraph(chartlabels, [53, 41, 65, 32, 60, 29, 56], [28, 56, 13, 48, 35, 19, 67], [44, 39, 31, 51, 60, 63, 28], [19, 47, 33, 55, 49, 41, 60], [28, 29, 60, 41, 52, 63, 33]) }`">
+      <Chart type="bar" :data="chartData" :options="chartOptions" class="h-[30rem]"/>
     </div>
+  </div>
 </template>
