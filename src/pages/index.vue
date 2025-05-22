@@ -1,3 +1,3 @@
 <template>
-  <Prototype2 />
+  <Dashboard />
 </template>

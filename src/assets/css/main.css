@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+.container
+{
+  .chart-container
+  {
+    width: 100%;
+    max-width: 30rem;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.p-button
+{
+  --p-button-primary-background: #1e2939;
+  --p-button-primary-border-color: #1e2939;
+  --p-button-primary-color: white;
+
+  --p-button-primary-hover-background: #4a5565;
+  --p-button-primary-hover-border-color: #4a5565;
+  --p-button-primary-hover-color: white;
+
+  --p-button-primary-active-background: #4a5565;
+  --p-button-primary-active-border-color: #4a5565;
+
+}
+
+.p-toggleswitch
+{
+  --p-toggleswitch-checked-background: #1e2939;
+  --p-toggleswitch-checked-hover-background: #4a5565;
+}
+
+.slide-enter-active,
+.slide-leave-active
+{
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from
+{
+  transform: translateX(-100%);
+}
+
+.slide-leave-to
+{
+  transform: translateX(-100%);
+}
